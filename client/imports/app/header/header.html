@@ -1,0 +1,9 @@
+<div class="header">
+  <a href="#default" class="logo">Logo</a>
+  <div class="header-right">
+    <!-- <a class="active" href="#home">Home</a> -->
+    <a *ngIf="user" style="cursor: pointer;" (click)="goToList()">List</a>
+    <a *ngIf="!user" class="connexion" (click)='Login()'>Login</a>
+    <a *ngIf="user" class="connexion" (click)='Logout()'>Logout</a>
+  </div>
+</div>

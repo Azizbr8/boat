@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "TEST_BROWSER_DRIVER=puppeteer meteor test --driver-package=ardatan:mocha --raw-logs",
+    "test:ci": "TEST_BROWSER_DRIVER=puppeteer meteor test --driver-package=ardatan:mocha --once --raw-logs"
+  },
+  "dependencies": {
+    "@angular/animations": "^7.2.12",
+    "@angular/cdk": "^7.3.7",
+    "@angular/common": "^7.1.0",
+    "@angular/compiler": "^7.1.0",
+    "@angular/core": "^7.1.0",
+    "@angular/forms": "^7.1.0",
+    "@angular/material": "^7.3.7",
+    "@angular/platform-browser": "^7.1.0",
+    "@angular/platform-browser-dynamic": "^7.1.0",
+    "@angular/router": "^7.1.0",
+    "@babel/runtime": "^7.1.5",
+    "angular2-meteor-accounts-ui": "^1.0.0",
+    "bcrypt": "^3.0.5",
+    "core-js": "^2.5.7",
+    "font-awesome": "^4.7.0",
+    "meteor-node-stubs": "^0.4.1",
+    "meteor-rxjs": "^0.4.14",
+    "rxjs": "^6.3.0",
+    "simpl-schema": "^1.5.5",
+    "zone.js": "^0.8.26"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "^7.1.0",
+    "@types/meteor": "^1.4.23",
+    "typescript": "~3.1.1"
+  }
+}

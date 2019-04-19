@@ -1,0 +1,61 @@
+<div class="container">  
+  <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()" id="inscription">
+    <h3>Inscription</h3>
+    <fieldset>
+        <div *ngIf="nom.errors && isValidFormSubmitted != null && !isValidFormSubmitted" [ngClass] = "'error'"> 
+            <div *ngIf="nom.errors.pattern">
+              Prenom n'est pas valide
+            </div> 
+        </div>
+      <input formControlName="nom" placeholder="Nom" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+        <div *ngIf="prenom.errors && isValidFormSubmitted != null && !isValidFormSubmitted" [ngClass] = "'error'"> 
+            <div *ngIf="prenom.errors.pattern">
+              Prenom n'est pas valide
+            </div> 
+        </div>
+      <input formControlName="prenom" placeholder="Prenom" type="text" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+        <div *ngIf="email.errors && isValidFormSubmitted != null && !isValidFormSubmitted" [ngClass] = "'error'"> 
+            <div *ngIf="email.errors.pattern">
+              Email n'est pas valide
+            </div> 
+        </div>
+      <input formControlName="email" placeholder="Email" type="email" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+        <div *ngIf="numTel.errors && isValidFormSubmitted != null && !isValidFormSubmitted" [ngClass] = "'error'"> 
+            <div *ngIf="numTel.errors.pattern">
+              Le numéro n'est pas valide
+            </div> 
+        </div>
+      <input formControlName="numTel" placeholder="Telephone" type="tel" tabindex="4" required>
+    </fieldset>
+    <fieldset>
+        <div *ngIf="age.errors && isValidFormSubmitted != null && !isValidFormSubmitted" [ngClass] = "'error'"> 
+            <div *ngIf="age.errors.pattern">
+              L'age n'est pas valide
+            </div> 
+        </div>
+      <input formControlName="age" placeholder="Age" type="number" tabindex="5" required>
+    </fieldset>
+    <fieldset>
+        <div *ngIf="password.errors && isValidFormSubmitted != null && !isValidFormSubmitted" [ngClass] = "'error'"> 
+            <div *ngIf="password.errors.pattern">
+              Le mode passe n'est pas valide
+            </div> 
+        </div>
+      <input formControlName="password" placeholder="Password" type="password" tabindex="6" required>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit">Submit</button>
+    </fieldset>
+    <div class="connexionContainer">
+      <a class="connexionLink" (click)="connexionLink()">
+        Connexion
+      </a>
+    </div>
+  </form>
+</div>
